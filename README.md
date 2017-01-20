@@ -32,7 +32,9 @@ The following dependencies are needed by CRISPRDetect.
 	cd-hit-est 	Comes with cdhit package  	   :	Download from http://weizhongli-lab.org/cd-hit/download.php  	
 	blastn 		Comes with ncbi-blast+ package :	Download from ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
 
-CRISPRDetect requires clustalw2 to be available in the $PATH as clustalw. <font color=blue><b>So either rename the /usr/local/bin/clustalw2 to /usr/local/bin/clustalw or create a symbolic link "ln -s /usr/local/bin/clustalw2 /usr/local/bin/clustalw" </font></b>.
+CRISPRDetect requires clustalw2 to be available in the $PATH as clustalw. You can do that by <b>"cp /PATH_TO_CLUSTALW2/clustalw2 /bin/clustalw"</b> or by creating 
+a symbolic link <b>"ln -s /PATH_TO_CLUSTALW2/clustalw2 /bin/clustalw"</b> where PATH_TO_CLUSTALW2 is the full path of the directory where the executable clustalw2 is
+present. 
 
 Once all the dependencies are installed, please check that they are successfully installed and available in the user/system PATH by typing the following:
 
