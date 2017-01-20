@@ -1,10 +1,13 @@
 CRISPRDetect Version 2.2 help:
+---------------------
+	CRISPREDetect is a perl program developed and tested in Fedora 21 Linux operating system. If all the 3rd party dependencies are installed and available in 
+	user/system $PATH CRISPRDetect should run without any issues in all Unix based operating systems. The cd-hit-est program installation in Mac operating system 
+	were reported to have issues. Please refer to the link: https://github.com/weizhongli/cdhit/issues/24   
 
 
 INSTALLATION:
-
-CRISPREDetect is a perl program developed and tested in Fedora 21 Linux operating system. If all the 3rd party dependencies are installed and available in 
-user/system $PATH CRISPRDetect should run without any issues in all Unix based operating systems. For Mac operating system  
+	Please make sure that the following 3rd party tools are installed in your system. The perl package 'parallel' is provided in the 'lib' folder and should work.
+	
 
 
 CRISPRDetect dependencies: 
