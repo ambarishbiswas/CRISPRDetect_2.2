@@ -25,13 +25,14 @@ CRISPRDetect dependencies:
 ---------------------
 The following dependencies are needed by CRISPRDetect. 
 
-	clustalw 	Download from ftp://ftp.ebi.ac.uk/pub/software/clustalw2/2.1/ <font color=blue>and either rename the /usr/local/bin/clustalw2 to /usr/local/bin/clustalw or create a symbolic link "ln -s /usr/local/bin/clustalw2 /usr/local/bin/clustalw" </font>.	
+	clustalw 	Download from ftp://ftp.ebi.ac.uk/pub/software/clustalw2/2.1/ 
 	water 		Comes with EMBOSS:6.3.1+ tools : 	Download from ftp://emboss.open-bio.org/pub/EMBOSS/EMBOSS-6.6.0.tar.gz
 	seqret 		Comes with EMBOSS:6.3.1+ tools : 	Download from ftp://emboss.open-bio.org/pub/EMBOSS/EMBOSS-6.6.0.tar.gz
 	RNAfold 	Comes with Vienna RNA package  :	Download the correct version specific for your operating system from http://www.tbi.univie.ac.at/RNA/#download
 	cd-hit-est 	Comes with cdhit package  	   :	Download from http://weizhongli-lab.org/cd-hit/download.php  	
 	blastn 		Comes with ncbi-blast+ package :	Download from ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
 
+CRISPRDetect requires clustalw2 to be available in the $PATH as clustalw. <font color=blue><b>So either rename the /usr/local/bin/clustalw2 to /usr/local/bin/clustalw or create a symbolic link "ln -s /usr/local/bin/clustalw2 /usr/local/bin/clustalw" </font></b>.
 
 Once all the dependencies are installed, please check that they are successfully installed and available in the user/system PATH by typing the following:
 
