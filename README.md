@@ -1,8 +1,11 @@
 CRISPRDetect Version 2.2 help:
 ---------------------
-CRISPREDetect is a perl program developed and tested in Fedora 21 Linux operating system. If all the 3rd party dependencies are installed and available in 
-user/system $PATH CRISPRDetect should run without any issues in all Unix based operating systems. The cd-hit-est program installation in Mac operating system 
-were reported to have issues. Please refer to the link: https://github.com/weizhongli/cdhit/issues/24   
+CRISPREDetect is a perl program developed and tested in Fedora 21 Linux operating system. CRISPRDetect.pl should run under any unix based 
+operating system that has a working 'perl' executable [comes with default installations under all *nix based operating systems]. If all the
+3rd party dependencies are installed and available in user/system $PATH CRISPRDetect should run without any issues. 
+
+The cd-hit-est program installation in Mac operating system were reported to have issues. If you face issues installing cd-hit-est, please 
+refer to the link: https://github.com/weizhongli/cdhit/issues/24   
 
 
 INSTALLATION:
@@ -12,6 +15,7 @@ Please make sure that the following 3rd party tools are installed in your system
 
 
 CRISPRDetect dependencies: 
+---------------------
 The following dependencies are needed by CRISPRDetect. 
 
 	clustalw 	Download from ftp://ftp.ebi.ac.uk/pub/software/clustalw2/2.1/ and either rename the /usr/local/bin/clustalw2 to /usr/local/bin/clustalw or create a symbolic link "ln -s /usr/local/bin/clustalw2 /usr/local/bin/clustalw".	
@@ -33,10 +37,11 @@ Once all the dependencies are installed, please check that they are successfully
 
 
 Basic syntax:	
+---------------------
 
 	perl CRISPRDetect.pl -g NZ_CP006019.gbk -o NZ_CP006019_CRISPRDetect.txt > NC_003106_CRISPRDetect.log
 
-The above command runs CRISPRDetect with default paramaeter on a complete gbk file (file containing both annotation and sequence) that has cas1 or cas2 annotated.]
+The above command runs CRISPRDetect with default paramaeter on a complete gbk file (file containing both annotation and sequence) that has cas1 or cas2 annotated.
 	
 	perl CRISPRDetect.pl -f test_multifasta.fa -o test_CRISPRDetect -check_direction 0 -array_quality_score_cutoff  3 -T 0 > test.log
         
@@ -90,10 +95,9 @@ Additional parameters [optional]:
 
 Advanced options [optional]:
 ---------------------------	
-	 
-	To test different methods as specified in the literature, open the CRISPRDetect.pl program with any text editor [e.g. gedit in RHEL/Fedora/CentOS, or vi in any *nix OS, or 
-	notepad in Windows OS] and change the parameters in the top most section of the script. To toggle individual methods, locate the '$check_' prefix and change the value to 1 
-	(i.e. the method will be applied) or 0 (i.e. the method will not be applied). 
+To test different methods as specified in the literature, open the CRISPRDetect.pl program with any text editor [e.g. gedit in RHEL/Fedora/CentOS, or vi in any *nix OS, or 
+notepad in Windows OS] and change the parameters in the top most section of the script. To toggle individual methods, locate the '$check_' prefix and change the value to 1 
+(i.e. the method will be applied) or 0 (i.e. the method will not be applied). 
 	
 	Examples:
 		
@@ -116,8 +120,7 @@ NOTE:
 	Please make sure that the 'clustalw', 'RNAfold', 'water' , 'seqret', 'cd-hit-est' and 'blastn' are in the system path and have execution permission for the current user. The 'tmp'
 	folder in the current directory should have read and write permissions. An easy way to do that is by issuing the command 'chmod -R 755 . && chmod 777 tmp' from the current directory.
 
-	CRISPRDetect.pl should run under any unix based operating system that has a working 'perl' executable [comes with default installations under all *nix based operating systems]. 
-	However, Mac OS users may require to  compile and install RNAfold (comes with vienna RNA package).
+	
            
 	For version updates and bug fixes refer to http://bioanalysis.otago.ac.nz/CRISPRDetect  
 
