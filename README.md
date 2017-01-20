@@ -10,8 +10,14 @@ refer to the link: https://github.com/weizhongli/cdhit/issues/24
 
 INSTALLATION:
 ---------------------
-Please make sure that the following 3rd party tools are installed in your system. The perl package 'parallel' is provided in the 'lib' folder and should work.
-	
+Please make sure that the following 3rd party tools are installed in your system. The only CPAN perl package 'Parallel' is provided in the 'lib' folder 
+and should work. However, if it doesn't then either execute "cpan Parallel::ForkManager" to install it or execute the following commands after making sure 
+you have its dependencies (POSIX, Storable, File::Spec, File::Temp, File::Path 2.00 and Test::More 0.81_01) installed in your system
+
+	wget http://search.cpan.org/CPAN/authors/id/Y/YA/YANICK/Parallel-ForkManager-1.19.tar.gz
+	tar xvzf Parallel-ForkManager-1.19.tar.gz
+	cd Parallel-ForkManager-1.19
+	perl Makefile.PL && make test && make install
 
 
 CRISPRDetect dependencies: 
