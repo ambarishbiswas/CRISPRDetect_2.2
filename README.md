@@ -1,8 +1,8 @@
-
-CRISPRDetect Version:2.2 readme:
+CRISPRDetect Version 2.2 help:
 
 
 INSTALLATION:
+
 CRISPREDetect is a perl program developed and tested in Fedora 21 Linux operating system. If all the 3rd party dependencies are installed and available in 
 user/system $PATH CRISPRDetect should run without any issues in all Unix based operating systems. For Mac operating system  
 
@@ -20,23 +20,23 @@ The following dependencies are needed by CRISPRDetect.
 
 Once all the dependencies are installed, please check that they are successfully installed and available in the user/system PATH by typing the following:
 
-clustalw -help
-water -help
-seqret -help
-RNAfold -help
-cd-hit-est -help
-blastn -help
+	clustalw -help
+	water -help
+	seqret -help
+	RNAfold -help
+	cd-hit-est -help
+	blastn -help
 
 
-Syntax:	
+Basic syntax:	
 
-perl CRISPRDetect.pl -g NZ_CP006019.gbk -o NZ_CP006019_CRISPRDetect.txt > NC_003106_CRISPRDetect.log
+	perl CRISPRDetect.pl -g NZ_CP006019.gbk -o NZ_CP006019_CRISPRDetect.txt > NC_003106_CRISPRDetect.log
+
+The above command runs CRISPRDetect with default paramaeter on a complete gbk file (file containing both annotation and sequence) that has cas1 or cas2 annotated.]
 	
-	     Runs with defaults on a complete gbk file that has cas1 or cas2 annotated.]
-	
-perl CRISPRDetect.pl -f test_multifasta.fa -o test_CRISPRDetect -check_direction 0 -array_quality_score_cutoff  3 -T 0 > test.log
+	perl CRISPRDetect.pl -f test_multifasta.fa -o test_CRISPRDetect -check_direction 0 -array_quality_score_cutoff  3 -T 0 > test.log
         
-        [Runs with a lower score cutoff on a fasta file, cutoff 3 rather than 4, as cas1 and cas2 are not annotated and would score +1. Appropriate for contigs/fasta. -T 0, use all processors rather than the default of 4. Does not check direction (not recommended) ]
+The above command runs CRISPRDetect with a lower score cutoff on a fasta file, cutoff 3 rather than 4, as cas1 and cas2 are not annotated and would score +1. Appropriate for contigs/fasta. -T 0, use all processors rather than the default of 4. Does not check direction (not recommended) ]
 	
 
 
@@ -74,7 +74,7 @@ Filtering parameters [optional]:
 	-minimum_repeat_length		23	Minimum length of repeats 
 	-minimum_no_of_repeats		3	Predicted CRISPRs with number of repeats less than this value will be excluded. To include CRISPRs with only 2 repeats, use -minimum_no_of_repeats 2
 	-array_quality_score_cutoff	4	Predicted CRISPRs with score less than this value will be excluded from the output file. 
-						The CRISPRs with score >=0 and less than the specied value will be moved to the output.fp file [output refers to user given output filename]. Cutoff of 3 is more appropriate for fasta files.
+									The CRISPRs with score >=0 and less than the specied value will be moved to the output.fp file [output refers to user given output filename]. Cutoff of 3 is more appropriate for fasta files.
 						
 
 Additional parameters [optional]:
