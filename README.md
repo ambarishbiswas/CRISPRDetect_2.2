@@ -53,7 +53,7 @@ Basic syntax:
 
 The above command runs CRISPRDetect with default paramaeter on a complete gbk file (file containing both annotation and sequence) that has cas1 or cas2 annotated.
 	
-	perl CRISPRDetect.pl -f test_multifasta.fa -o test_CRISPRDetect -check_direction 0 -array_quality_score_cutoff  3 -T 0 > test.log
+	perl CRISPRDetect.pl -f test_multifasta.fa -o test_CRISPRDetect -check_direction 0 -array_quality_score_cutoff 3 -T 0 > test.log
         
 The above command runs CRISPRDetect with a lower score cutoff on a fasta file, cutoff 3 rather than 4, as cas1 and cas2 are not annotated and would score +1. Appropriate for contigs/fasta. -T 0, use all processors rather than the default of 4. Does not check direction (not recommended) ]
 	
@@ -127,11 +127,13 @@ notepad in Windows OS] and change the parameters in the top most section of the 
 
 
 NOTE:   
-	Please make sure that the 'clustalw', 'RNAfold', 'water' , 'seqret', 'cd-hit-est' and 'blastn' are in the system path and have execution permission for the current user. The 'tmp'
-	folder in the current directory should have read and write permissions. An easy way to do that is by issuing the command 'chmod -R 755 . && chmod 777 tmp' from the current directory.
+---------------------------	
+The 'tmp' folder in the CRISPRDetect installation directory should have read and write permissions. An easy way to do that is by issuing the command 'chmod -R 755 . && chmod 777 tmp' 
+from the CRISPRDetect installation directory. If you use CRISPRDetect, then please cite:
 
-	
-           
-	For version updates and bug fixes refer to http://bioanalysis.otago.ac.nz/CRISPRDetect  
+	Biswas, A., Staals, R. H., Morales, S. E., Fineran, P. C. & Brown, C. M. CRISPRDetect: a flexible algorithm to define CRISPR arrays. BMC Genomics 17, 356 (2016).
+
+For version updates and bug fixes refer to https://github.com/ambarishbiswas/CRISPRDetect_2.2 
+	http://bioanalysis.otago.ac.nz/CRISPRDetect  
 
  	
