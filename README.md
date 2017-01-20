@@ -1,6 +1,6 @@
 CRISPRDetect Version 2.2 help:
 ---------------------
-CRISPREDetect is a perl program developed and tested in Fedora 21 Linux operating system. CRISPRDetect.pl should run under any unix based 
+CRISPREDetect is a perl program developed and tested in Fedora 21 Linux operating system. <b>CRISPRDetect.pl</b> should run under any unix based 
 operating system that has a working 'perl' executable [comes with default installations under all *nix based operating systems]. If all the
 3rd party dependencies are installed and available in user/system $PATH CRISPRDetect should run without any issues. 
 
